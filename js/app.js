@@ -9,18 +9,29 @@ updateContent();
 function updateContent() {
 	const tableSizeContainer = document.getElementById("table-size-container");
 	var fragmentId = location.hash.substr(1);
-	tableSizeContainer.innerHTML = getContent(fragmentId);
+
+	/* Call getContent() asynchronously. This means that 
+	function(content) will be called later on rather than now. */
+	getContent(fragmentId, function(content) {
+		tableSizeContainer.innerHTML = content;
+	});
 	setActiveLink(fragmentId);
 };
 
 // Returns content depending on the current fragment identifier
-function getContent(fragmentId) {
-	var content = {
-		round: "This is the round tables page",
-		square: "This is the square tables page",
-		rectangle: "This is the rectangle tables page"
-	};
-	return content[fragmentId];
+function getContent(fragmentId, callback) {
+
+	// Create a new AJAX request for fetching the partial HTML file
+	var request = new XMLHttpRequest();
+
+	// Call the callback with the content loaded from the file
+	request.onload = function() {
+		callback(request.responseText);
+	}
+
+	// Fetch the partial HTML file for the given fragment ID
+	request.open("GET", fragmentId + ".html");
+	request.send(null);
 }
 
 
