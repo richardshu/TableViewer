@@ -6,13 +6,18 @@ body {
 	text-align: center;
 }
 
-#table-shape-container a {
+#navbar a {
+	color: #000000;
 	font-size: 1.9em;
 	margin: 0.5em 0 0 0.5em;
 	padding: 0.5em 2.5em 0.5em 2.5em;
 	background-color: #a56d9e;
 	text-decoration: none;
 	display: inline-block;
+}
+
+#navbar .active {
+	background-color: #ffffff;
 }
 
 #main-content {
