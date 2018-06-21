@@ -3,11 +3,6 @@ body {
 }
 
 .center {
-    display: block;
-	margin: auto;
-}
-
-#table-shape-container {
 	text-align: center;
 }
 
@@ -17,4 +12,9 @@ body {
 	padding: 0.5em 2.5em 0.5em 2.5em;
 	background-color: #a56d9e;
 	text-decoration: none;
+	display: inline-block;
+}
+
+#main-content {
+	background-color: #ffffff; 
 }
