@@ -18,8 +18,17 @@ function updateContent() {
 	setActiveLink(fragmentId);
 };
 
-// Returns content depending on the current fragment identifier
+// Gets the appropriate content for the given fragment identifier
 function getContent(fragmentId, callback) {
+	fetchFile(fragmentId + ".html", callback);
+}
+
+/*
+* Encapsulates an HTTP GET request using XMLHttpRequest.
+* Fetches the file at the given path and then calls 
+* the callback with the text content of the file.
+*/
+function fetchFile(filepath, callback) {
 
 	// Create a new AJAX request for fetching the partial HTML file
 	var request = new XMLHttpRequest();
@@ -30,16 +39,16 @@ function getContent(fragmentId, callback) {
 	}
 
 	// Fetch the partial HTML file for the given fragment ID
-	request.open("GET", fragmentId + ".html");
+	request.open("GET", filepath);
 	request.send(null);
 }
 
 
 // Sets the "active" class on the active navigation link
 function setActiveLink(fragmentId) {
-	const tableShapeLinks = document.getElementById("navbar").children;
-	for (var i = 0; i < tableShapeLinks.length; i++) {
-		var link = tableShapeLinks[i];
+	const navbar = document.getElementById("navbar").children;
+	for (var i = 0; i < navbar.length; i++) {
+		var link = navbar[i];
 		var pageName = link.getAttribute("href").substr(1);
 		if (pageName === fragmentId) {
 			link.setAttribute("class", "active");
