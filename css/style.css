@@ -1,0 +1,20 @@
+body {
+	background-color: #efe0f3;
+}
+
+.center {
+    display: block;
+	margin: auto;
+}
+
+#table-shape-container {
+	text-align: center;
+}
+
+#table-shape-container a {
+	font-size: 1.9em;
+	margin: 0.5em 0 0 0.5em;
+	padding: 0.5em 2.5em 0.5em 2.5em;
+	background-color: #a56d9e;
+	text-decoration: none;
+}
