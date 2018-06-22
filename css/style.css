@@ -2,6 +2,7 @@
 
 body {
 	background-color: #efe0f3;
+	font-family: 'Amaranth';
 }
 
 #header-logo {
@@ -12,10 +13,8 @@ body {
 	text-align: center;
 }
 
-#navbar a {
+#table-shape-navbar a, #table-size-navbar a {
 	color: #000000;
-	font-size: 1.9em;
-	font-family: 'Amaranth';
 	margin: 0.5em 0 0 0.5em;
 	padding: 0.5em 2.5em 0.5em 2.5em;
 	background-color: #a56d9e;
@@ -23,10 +22,14 @@ body {
 	display: inline-block;
 }
 
-#navbar .active {
-	background-color: #ffffff;
+#table-shape-navbar {
+	font-size: 1.9em;
 }
 
-#main-content {
-	background-color: #ffffff; 
+#table-size-navbar {
+	font-size: 1.5em;
+}
+
+#table-shape-navbar .active {
+	background-color: #ffffff;
 }

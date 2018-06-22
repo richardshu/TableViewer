@@ -46,7 +46,7 @@ function fetchFile(filepath, callback) {
 
 // Sets the "active" class on the active navigation link
 function setActiveLink(fragmentId) {
-	const navbar = document.getElementById("navbar").children;
+	const navbar = document.getElementById("table-shape-navbar").children;
 	for (var i = 0; i < navbar.length; i++) {
 		var link = navbar[i];
 		var pageName = link.getAttribute("href").substr(1);
