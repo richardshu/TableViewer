@@ -20,7 +20,7 @@ function updateContent() {
 
 // Gets the appropriate content for the given fragment identifier
 function getContent(fragmentId, callback) {
-	fetchFile(fragmentId + ".html", callback);
+	fetchFile("nav/" + fragmentId + ".html", callback);
 }
 
 /*

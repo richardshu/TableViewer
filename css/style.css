@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth');
+
 body {
 	background-color: #efe0f3;
+}
+
+#header-logo {
+	width: 30%;
 }
 
 .center {
@@ -9,6 +15,7 @@ body {
 #navbar a {
 	color: #000000;
 	font-size: 1.9em;
+	font-family: 'Amaranth';
 	margin: 0.5em 0 0 0.5em;
 	padding: 0.5em 2.5em 0.5em 2.5em;
 	background-color: #a56d9e;
